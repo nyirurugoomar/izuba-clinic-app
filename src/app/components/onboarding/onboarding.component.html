@@ -1,46 +1,59 @@
-<div class="w-full h-screen">
+<div class="w-full h-full">
     <div class="grid grid-cols-1 lg:grid-cols-2">
         <div class="p-20">
             <h1 class="text-start text-white text-4xl font-bold">Logo</h1>
-            <div class="mt-20">
+            <div class="mt-20 space-y-4">
                 <p class="text-white font-[700] text-[36px] leading-[44px]">Hi there, ....</p>
                 <p class="text-[#ABB8C4] text-[18px] font-[500] leading-[28px]">Get Started with Appointments.</p>
             </div>
-            <form action="">
-                <div class="mt-10">
+            <form [formGroup]="registerForm" (ngSubmit)="register()">
+                <div class="mt-4">
                     <label for="fullname" class="text-[#ABB8C4] block mb-2 text-[14px] font-medium leading-[20px]">Full Name</label>
                     <div class="relative">
                         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                             <img src='/user.svg' class="w-5 h-5 text-gray-400" alt="user icon">
                         </div>
-                        <input type="text" id="fullname"  placeholder="Full Name" class="w-full pl-10 px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" />
+                        <input type="text"   placeholder="Full Name" class="w-full pl-10 px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" formControlName="fullname" required />
+                       
                     </div>
+                    <div *ngIf="registerForm.get('fullname')?.touched && registerForm.get('fullname')?.invalid">
+                        <small class="text-red-600" *ngIf="registerForm.get('fullname')?.hasError('required')">Fullname is required</small>
+                        <small class="text-red-600" *ngIf="registerForm.get('fullname')?.hasError('minlength')">Fullname must be at least 3 characters long</small>
+                      </div>
                 </div>
-                <div class="mt-10">
+                <div class="mt-4">
                     <label for="fullname" class="text-[#ABB8C4] block mb-2 text-[14px] font-medium leading-[20px]">Email address</label>
                     <div class="relative">
                         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                             <img src='/email.svg' class="w-5 h-5 text-gray-400" alt="user icon">
                         </div>
-                        <input type="email" id="fullname"  placeholder="Email" class="w-full pl-10 px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" />
+                        <input type="email"   placeholder="Email" class="w-full pl-10 px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" formControlName="email" required />
                     </div>
+                    <div *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.invalid" class="text-red-500 text-sm mt-1">
+                        <small class="text-red-600" *ngIf="registerForm.get('email')?.hasError('required')">Email is required</small>
+                        <small class="text-red-600" *ngIf="registerForm.get('email')?.hasError('email')">Enter a valid email</small>
+                      </div>
                 </div>
-                <div class="mt-10">
+                <div class="mt-4">
                     <label for="fullname" class="text-[#ABB8C4] block mb-2 text-[14px] font-medium leading-[20px]">Phone number</label>
                     <div class="relative">
                         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                             <img src='/Phone.svg' class="w-5 h-5 text-gray-400" alt="user icon">
                         </div>
-                        <input type="number" id="fullname"  placeholder="Tel" class="w-full pl-10 px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" />
+                        <input type="number"   placeholder="Tel" class="w-full pl-10 px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" formControlName="phone" required />
                     </div>
+                    <div *ngIf="registerForm.get('phone')?.touched && registerForm.get('phone')?.invalid" class="text-red-500 text-sm mt-1">
+                        <small class="text-red-600" *ngIf="registerForm.get('phone')?.hasError('required')">Phone number is required</small>
+                        <small class="text-red-600" *ngIf="registerForm.get('phone')?.hasError('pattern')">Phone number must be 10 digits</small>
+                      </div>
                 </div>
                 <div class="mt-10">
-                    <button class="text-white text-[16px] leading-[24px] font-[600] bg-[#24AE7C] w-full h-[48px] rounded-[8px]">Get Started</button>
+                    <button type="submit" class="text-white text-[16px] leading-[24px] font-[600] bg-[#24AE7C] w-full h-[48px] rounded-[8px]">Get Started</button>
                 </div>
             </form>
         </div>
         <div class="bg-onboardImage bg-cover h-screen">
-
+          
         </div>
     </div>
 </div>

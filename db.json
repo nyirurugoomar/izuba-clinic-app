@@ -1,0 +1,73 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "register": [
+    {},
+    {
+      "id": "b828",
+      "fullname": "Nyirurugo Omar",
+      "email": "nyirurugoomar@gmail.com",
+      "phone": 38585904840
+    },
+    {
+      "id": "1088",
+      "fullname": null,
+      "email": null,
+      "phone": null
+    },
+    {
+      "id": "abbf",
+      "fullname": "test",
+      "email": "test@gmail.com",
+      "phone": 588995896
+    },
+    {
+      "id": "c50e",
+      "fullname": "john",
+      "email": "john@gmail.com",
+      "phone": 4759659
+    },
+    {
+      "id": "2240",
+      "fullname": "jane",
+      "email": "jane@gmail.com",
+      "phone": 48857
+    },
+    {
+      "id": "8a25",
+      "fullname": "james",
+      "email": "james@gmail.com",
+      "phone": 843985904856
+    },
+    {
+      "id": "5478",
+      "fullname": "lucky",
+      "email": "lucky@gmail.com",
+      "phone": 9473957584
+    },
+    {
+      "id": "73ea",
+      "fullname": "lucky",
+      "email": "lucky@gmail.com",
+      "phone": 4096946894
+    }
+  ],
+  "patientInfo": [
+    {}
+  ]
+}
