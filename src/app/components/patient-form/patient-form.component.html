@@ -15,8 +15,11 @@
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                     <img src='/user.svg' class="w-5 h-5 text-gray-400" alt="user icon">
                 </div>
-                <input type="text"   placeholder="ex:Adam" class="w-full pl-10 px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none"  required formControlName="fullname" />
-               
+                <input type="text"   placeholder="ex:Adam" class="w-full pl-10 px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none"  required formControlName="fullname" /> 
+            </div>
+            <div *ngIf="patientForm.get('fullname')?.touched && patientForm.get('fullname')?.invalid">
+                <small class="text-red-600" *ngIf="patientForm.get('fullname')?.hasError('required')">Full Name is required</small>
+                <small class="text-red-600" *ngIf="patientForm.get('fullname')?.hasError('minlength')">Full Name must be a string</small>
             </div>
             
         </div>
@@ -29,7 +32,12 @@
                     </div>
                     <input type="email" placeholder="ex:adam@gmail.com" class="w-full pl-10 px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required formControlName="email" />
                 </div>
+                <div *ngIf="patientForm.get('email')?.touched && patientForm.get('email')?.invalid" class="text-red-500 text-sm mt-1">
+                    <small class="text-red-600" *ngIf="patientForm.get('email')?.hasError('required')">Email is required</small>
+                    <small class="text-red-600" *ngIf="patientForm.get('email')?.hasError('email')">Enter a valid email</small>
+                  </div>
             </div>
+            
         
             <div class="flex-1 mt-4">
                 <label  class="text-[#ABB8C4] block mb-2 text-[14px] font-medium leading-[20px]">Phone number</label>
@@ -38,6 +46,10 @@
                         <img src='/Phone.svg' class="w-5 h-5 text-gray-400" alt="phone icon">
                     </div>
                     <input type="number" placeholder="ex:078....." class="w-full pl-10 px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required formControlName="number"/>
+                </div>
+                <div *ngIf="patientForm.get('number')?.touched && patientForm.get('number')?.invalid" class="text-red-500 text-sm mt-1">
+                    <small class="text-red-600" *ngIf="patientForm.get('number')?.hasError('required')">Phone number is required</small>
+                    <small class="text-red-600" *ngIf="patientForm.get('number')?.hasError('pattern')">Phone number must be 10 digits</small>
                 </div>
             </div>
         </div>
@@ -49,6 +61,9 @@
                         <img src='/calendar.svg' class="w-5 h-5 text-gray-400" alt="phone icon">
                     </div>
                     <input type="date" placeholder="Select you birth date" class="w-full pl-10 px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none " required  formControlName="dob" />
+                </div>
+                <div *ngIf="patientForm.get('dob')?.touched && patientForm.get('dob')?.invalid" class="text-red-500 text-sm mt-1">
+                    <small class="text-red-600" *ngIf="patientForm.get('dob')?.hasError('required')">Date of birth is required</small>
                 </div>
             </div>
             
@@ -62,6 +77,9 @@
                         <mat-radio-button value="other" class="border-dashed border-2 p-4 w-[117px] border-[#363A3D] h-[48px] text-[#CDCECF] rounded-[5px] font-[500] text-[16px] leading-[24px]">Other</mat-radio-button>
                       </mat-radio-group>
                 </div>
+                <div *ngIf="patientForm.get('gender')?.touched && patientForm.get('gender')?.invalid" class="text-red-500 text-sm mt-1">
+                    <small class="text-red-600" *ngIf="patientForm.get('gender')?.hasError('required')">Gender is required</small>
+                </div>
              </div>
             
         </div>
@@ -69,19 +87,30 @@
         <div class="flex flex-col lg:flex-row gap-4">
             <div class="flex-1 mt-4">
                 <label  class="text-[#ABB8C4] block mb-2 text-[14px] font-medium leading-[20px]">Address</label> 
-                    <input type="text" placeholder="ex: 14 street, New York, NY - 5101" class="w-full px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required formControlName="address" />
+                <input type="text" placeholder="ex: 14 street, New York, NY - 5101" class="w-full px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required formControlName="address" />
+                <div *ngIf="patientForm.get('address')?.touched && patientForm.get('address')?.invalid" class="text-red-500 text-sm mt-1">
+                    <small class="text-red-600" *ngIf="patientForm.get('address')?.hasError('required')">Address is required</small>
+                </div>
             </div>
+            
         
             <div class="flex-1 mt-4">
                 <label  class="text-[#ABB8C4] block mb-2 text-[14px] font-medium leading-[20px]">Occupation</label>
                   <input type="text" placeholder="Software Engineer" class="w-full  px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required formControlName="occupation" />
+                  <div *ngIf="patientForm.get('occupation')?.touched && patientForm.get('occupation')?.invalid" class="text-red-500 text-sm mt-1">
+                    <small class="text-red-600" *ngIf="patientForm.get('occupation')?.hasError('required')">Occupation is required</small>
+                </div>
             </div>
         </div>
+        
 
         <div class="flex flex-col lg:flex-row gap-4">
             <div class="flex-1 mt-4">
                 <label  class="text-[#ABB8C4] block mb-2 text-[14px] font-medium leading-[20px]">Emergency contact name</label> 
                     <input type="text" placeholder="Guardian’s name" class="w-full px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required formControlName="emergencyContactName" />
+                    <div *ngIf="patientForm.get('emergencyContactName')?.touched && patientForm.get('emergencyContactName')?.invalid" class="text-red-500 text-sm mt-1">
+                        <small class="text-red-600" *ngIf="patientForm.get('emergencyContactName')?.hasError('required')">Guardian’s name is required</small>
+                    </div>
             </div>
         
             <div class="flex-1 mt-4">
@@ -91,6 +120,10 @@
                         <img src='/Phone.svg' class="w-5 h-5 text-gray-400" alt="phone icon">
                     </div>
                     <input type="number" placeholder="ex: 078......" class="w-full pl-10 px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required formControlName="emergencyPhoneNumber" />
+                </div>
+                <div *ngIf="patientForm.get('emergencyPhoneNumber')?.touched && patientForm.get('emergencyPhoneNumber')?.invalid" class="text-red-500 text-sm mt-1">
+                    <small class="text-red-600" *ngIf="patientForm.get('emergencyPhoneNumber')?.hasError('required')">Phone number is required</small>
+                    <small class="text-red-600" *ngIf="patientForm.get('emergencyPhoneNumber')?.hasError('pattern')">Phone number must be 10 digits</small>
                 </div>
             </div>
         </div>
@@ -107,39 +140,61 @@
                   {{ doctor.label }}
                 </option>
               </select>
+              <div *ngIf="patientForm.get('doctor')?.touched && patientForm.get('doctor')?.invalid" class="text-red-500 text-sm mt-1">
+                <small class="text-red-600" *ngIf="patientForm.get('doctor')?.hasError('required')">Choose Doctor name is required</small>
+            </div>
         </div>
     </div>
     <div class="flex flex-col lg:flex-row gap-4">
         <div class="flex-1 mt-4">
             <label  class="text-[#ABB8C4] block mb-2 text-[14px] font-medium leading-[20px]">Insurance provider</label> 
                 <input type="text" placeholder="ex: BlueCross" class="w-full px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required formControlName="insuranceProvider" />
+                <div *ngIf="patientForm.get('insuranceProvider')?.touched && patientForm.get('insuranceProvider')?.invalid" class="text-red-500 text-sm mt-1">
+                    <small class="text-red-600" *ngIf="patientForm.get('insuranceProvider')?.hasError('required')">Insurance provider is required</small>
+                </div>
         </div>
+        
     
         <div class="flex-1 mt-4">
             <label  class="text-[#ABB8C4] block mb-2 text-[14px] font-medium leading-[20px]">Insurance policy number</label>
               <input type="text" placeholder="ex: ABC1234567" class="w-full  px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required formControlName="insurancePolicyNumber" />
+              <div *ngIf="patientForm.get('insurancePolicyNumber')?.touched && patientForm.get('insurancePolicyNumber')?.invalid" class="text-red-500 text-sm mt-1">
+                <small class="text-red-600" *ngIf="patientForm.get('insurancePolicyNumber')?.hasError('required')">Insurance policy number is required</small>
+            </div>
         </div>
     </div>
     <div class="flex flex-col lg:flex-row gap-4">
         <div class="flex-1 mt-4">
             <label  class="text-[#ABB8C4] block mb-2 text-[14px]  font-medium leading-[20px]">Allergies (if any)</label> 
                 <input type="text" placeholder="ex: Peanuts, Penicillin, Pollen" class="w-full h-[96px] px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required formControlName="allergies" />
+                <div *ngIf="patientForm.get('allergies')?.touched && patientForm.get('allergies')?.invalid" class="text-red-500 text-sm mt-1">
+                    <small class="text-red-600" *ngIf="patientForm.get('allergies')?.hasError('required')">Allergies is required</small>
+                </div>
         </div>
     
         <div class="flex-1 mt-4">
             <label  class="text-[#ABB8C4] block mb-2 text-[14px]  font-medium leading-[20px]">Current medications</label>
               <input type="text" placeholder="ex: Ibuprofen 200mg, Levothyroxine 50mcg" class="w-full h-[96px]  px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required  formControlName="currentMedications" />
+              <div *ngIf="patientForm.get('currentMedications')?.touched && patientForm.get('currentMedications')?.invalid" class="text-red-500 text-sm mt-1">
+                <small class="text-red-600" *ngIf="patientForm.get('currentMedications')?.hasError('required')">Current Medications is required</small>
+            </div>
         </div>
     </div>
     <div class="flex flex-col lg:flex-row gap-4">
         <div class="flex-1 mt-4">
             <label  class="text-[#ABB8C4] block mb-2 text-[14px]  font-medium leading-[20px]">Family medical history (if relevant)</label> 
                 <input type="text" placeholder="ex: Mother had breast cancer" class="w-full h-[96px] px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required  formControlName="medicalHistory" />
+                <div *ngIf="patientForm.get('medicalHistory')?.touched && patientForm.get('medicalHistory')?.invalid" class="text-red-500 text-sm mt-1">
+                    <small class="text-red-600" *ngIf="patientForm.get('medicalHistory')?.hasError('required')">Medical Historys is required</small>
+                </div>
         </div>
     
         <div class="flex-1 mt-4">
             <label  class="text-[#ABB8C4] block mb-2 text-[14px]  font-medium leading-[20px]">Past medical history</label>
               <input type="text" placeholder="ex: Asthma diagnosis in childhood" class="w-full h-[96px]  px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required formControlName="pastMedical" />
+              <div *ngIf="patientForm.get('pastMedical')?.touched && patientForm.get('pastMedical')?.invalid" class="text-red-500 text-sm mt-1">
+                <small class="text-red-600" *ngIf="patientForm.get('pastMedical')?.hasError('required')">Past Medical is required</small>
+            </div>
         </div>
     </div>
     <div class="mt-10">
@@ -154,12 +209,20 @@
                   {{ identification.label }}
                 </option>
               </select>
+              <div *ngIf="patientForm.get('birthCertificate')?.touched && patientForm.get('birthCertificate')?.invalid" class="text-red-500 text-sm mt-1">
+                <small class="text-red-600" *ngIf="patientForm.get('birthCertificate')?.hasError('required')">Birth Certificate is required</small>
+            </div>
         </div>
     </div>
     <div class="flex-1 mt-4">
           <label  class="text-[#ABB8C4] block mb-2 text-[14px]  font-medium leading-[20px]">Identification Number</label>
-          <input type="number" placeholder="ex 1234567" class="w-full px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required />
+          <input type="number" placeholder="ex 1234567" class="w-full px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required formControlName="identificationNumber" />
+          <div *ngIf="patientForm.get('identificationNumber')?.touched && patientForm.get('identificationNumber')?.invalid" class="text-red-500 text-sm mt-1">
+            <small class="text-red-600" *ngIf="patientForm.get('identificationNumber')?.hasError('required')">Identification Number is required</small>
+        </div>
     </div>
+
+    
     
     <!-- <div class="w-full  p-6 mx-auto bg-[#1A1D21] text-gray-200 rounded-lg border-2 border-dashed border-gray-600 mt-4">
         <div class="flex flex-col items-center justify-center h-40">
@@ -177,7 +240,7 @@
         </div>
       </div> -->
         <div class="mt-10">
-            <button type="submit" class="w-full px-10 py-3 text-white font-medium tracking-widest text-center rounded-lg bg-[#2b8f6a] hover:bg-[#24AE7C] focus:outline-none">Submit and continue</button> 
+            <button type="submit" [disabled]="patientForm.invalid" class="w-full px-10 py-3 text-white font-medium tracking-widest text-center rounded-lg bg-[#2b8f6a] hover:bg-[#24AE7C] focus:outline-none">Submit and continue</button> 
         </div>
     </form>
    </div>

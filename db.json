@@ -172,6 +172,26 @@
       "medicalHistory": "test",
       "pastMedical": "test",
       "birthCertificate": "votersID"
+    },
+    {
+      "id": "764f",
+      "fullname": "",
+      "email": "",
+      "number": "",
+      "dob": "",
+      "gender": "",
+      "address": "",
+      "occupation": "",
+      "emergencyContactName": "",
+      "emergencyPhoneNumber": "",
+      "doctor": "",
+      "insuranceProvider": "",
+      "insurancePolicyNumber": "",
+      "allergies": "",
+      "currentMedications": "",
+      "medicalHistory": "",
+      "pastMedical": "",
+      "birthCertificate": ""
     }
   ],
   "appointmentInfo": [
@@ -210,6 +230,13 @@
       "reasonAppointment": "test",
       "additionComment": "test",
       "date": "2024-10-31"
+    },
+    {
+      "id": "0fa6",
+      "doctors": "",
+      "reasonAppointment": "",
+      "additionComment": "",
+      "date": ""
     }
   ]
 }
