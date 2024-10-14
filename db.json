@@ -77,9 +77,139 @@
       "fullname": "test",
       "email": "test@gmail.com",
       "phone": 3546346346
+    },
+    {
+      "id": "d2fd",
+      "fullname": "kwizera",
+      "email": "kwizera@gmail.com",
+      "phone": 4885785004
+    },
+    {
+      "id": "82e8",
+      "fullname": "test",
+      "email": "test@gmail.com",
+      "phone": 3948484444
     }
   ],
   "patientInfo": [
-    {}
+    {},
+    {
+      "id": "545f",
+      "fullname": "test",
+      "email": "test",
+      "number": 33429934,
+      "dob": "1987-05-14",
+      "gender": "female",
+      "address": "test",
+      "occupation": "test",
+      "emergencyContactName": "test",
+      "emergencyPhoneNumber": 41428784927,
+      "doctor": "Dr. Emily Carter",
+      "insuranceProvider": "test",
+      "insurancePolicyNumber": "2358635",
+      "allergies": "test",
+      "currentMedications": "test",
+      "medicalHistory": "test",
+      "pastMedical": "test",
+      "birthCertificate": "studentID"
+    },
+    {
+      "id": "2dff",
+      "fullname": "",
+      "email": "",
+      "number": "",
+      "dob": "",
+      "gender": "",
+      "address": "",
+      "occupation": "",
+      "emergencyContactName": "",
+      "emergencyPhoneNumber": "",
+      "doctor": "",
+      "insuranceProvider": "",
+      "insurancePolicyNumber": "",
+      "allergies": "",
+      "currentMedications": "",
+      "medicalHistory": "",
+      "pastMedical": "",
+      "birthCertificate": ""
+    },
+    {
+      "id": "0fd6",
+      "fullname": "",
+      "email": "",
+      "number": "",
+      "dob": "",
+      "gender": "",
+      "address": "",
+      "occupation": "",
+      "emergencyContactName": "",
+      "emergencyPhoneNumber": "",
+      "doctor": "",
+      "insuranceProvider": "",
+      "insurancePolicyNumber": "",
+      "allergies": "",
+      "currentMedications": "",
+      "medicalHistory": "",
+      "pastMedical": "",
+      "birthCertificate": ""
+    },
+    {
+      "id": "9507",
+      "fullname": "test",
+      "email": "test@gmail.com",
+      "number": 494944559,
+      "dob": "2024-10-31",
+      "gender": "male",
+      "address": "kigali",
+      "occupation": "test",
+      "emergencyContactName": "test",
+      "emergencyPhoneNumber": 53092592359,
+      "doctor": "Dr. Sarah Thompson",
+      "insuranceProvider": "test",
+      "insurancePolicyNumber": "test",
+      "allergies": "dtest",
+      "currentMedications": "tesat",
+      "medicalHistory": "test",
+      "pastMedical": "test",
+      "birthCertificate": "votersID"
+    }
+  ],
+  "appointmentInfo": [
+    {},
+    {
+      "id": "dc5e",
+      "doctors": "Dr. James Whitman",
+      "reasonAppointment": "test",
+      "additionComment": "test",
+      "date": "2024-09-30"
+    },
+    {
+      "id": "14b7",
+      "doctors": "",
+      "reasonAppointment": "",
+      "additionComment": "",
+      "date": ""
+    },
+    {
+      "id": "b74b",
+      "doctors": "",
+      "reasonAppointment": "",
+      "additionComment": "",
+      "date": ""
+    },
+    {
+      "id": "7449",
+      "doctors": "Dr. Michael Reynolds",
+      "reasonAppointment": "test",
+      "additionComment": "test",
+      "date": "2024-10-26"
+    },
+    {
+      "id": "83d3",
+      "doctors": "Dr. Emily Carter",
+      "reasonAppointment": "test",
+      "additionComment": "test",
+      "date": "2024-10-31"
+    }
   ]
 }

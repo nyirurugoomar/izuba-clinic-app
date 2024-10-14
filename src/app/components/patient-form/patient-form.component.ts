@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { PatientService } from '../../services/patient.service';
+import { Router } from '@angular/router';
+
 interface Food {
   value: string;
   viewValue: string;
@@ -42,7 +45,9 @@ export class PatientFormComponent {
 
 patientForm: FormGroup;
 
-constructor(private _fb:FormBuilder
+constructor(private _fb:FormBuilder,
+            private _patientService: PatientService,
+            private _router: Router
   ){
     this.patientForm = this._fb.group({
       fullname: '',
@@ -67,7 +72,15 @@ constructor(private _fb:FormBuilder
   }
 
   patient(){
-    console.log('patient submitted successfully');
+    if(this.patientForm.value){
+      this._patientService.patientInfo(this.patientForm.value).subscribe({
+        next:(val:any)=>{
+          alert("Patient added successfully")
+          this.patientForm.reset();
+          this._router.navigate(['/appointment']);
+        }
+      })
+    }
   }
 
 }

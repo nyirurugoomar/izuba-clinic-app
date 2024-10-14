@@ -15,6 +15,9 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { DashbordComponent } from './components/dashbord/dashbord.component';
+import { AppointmentFormComponent } from './components/appointment-form/appointment-form.component';
+import { SuccessPageComponent } from './components/success-page/success-page.component';
 
 
 @NgModule({
@@ -22,6 +25,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     AppComponent,
     OnboardingComponent,
     PatientFormComponent,
+    DashbordComponent,
+    AppointmentFormComponent,
+    SuccessPageComponent,
     
     
     
