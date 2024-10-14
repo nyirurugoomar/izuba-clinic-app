@@ -1,1 +1,185 @@
-<p class="text-white">patient-form works!</p>
+
+<div class="w-full h-full">
+<div class="p-20">
+    <h1 class="text-start text-white text-4xl font-bold">Logo</h1>
+   <div class="mt-10 space-y-4">
+    <h1 class="text-[36px] font-[700] leading-[44px] text-white">Welcome 👋</h1>
+    <p class="text-[16px] font-[600]leading-[24px] text-[#ABB8C4]">Let us know more about yourself</p>
+   </div>
+   <div class="mt-10">
+    <h1 class="text-white text-[30px] font-[700] leading-[36px]">Personal Information</h1>
+    <form [formGroup]="patientForm" (ngSubmit)="patient()" class="w-full">
+        <div class="mt-4">
+            <label  class="text-[#ABB8C4] block mb-2 text-[14px] font-medium leading-[20px]">Full Name</label>
+            <div class="relative">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <img src='/user.svg' class="w-5 h-5 text-gray-400" alt="user icon">
+                </div>
+                <input type="text"   placeholder="ex:Adam" class="w-full pl-10 px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none"  required formControlName="fullname" />
+               
+            </div>
+            
+        </div>
+        <div class="flex flex-col lg:flex-row gap-4">
+            <div class="flex-1 mt-4">
+                <label  class="text-[#ABB8C4] block mb-2 text-[14px] font-medium leading-[20px]">Email address</label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <img src='/email.svg' class="w-5 h-5 text-gray-400" alt="email icon">
+                    </div>
+                    <input type="email" placeholder="ex:adam@gmail.com" class="w-full pl-10 px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required formControlName="email" />
+                </div>
+            </div>
+        
+            <div class="flex-1 mt-4">
+                <label  class="text-[#ABB8C4] block mb-2 text-[14px] font-medium leading-[20px]">Phone number</label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <img src='/Phone.svg' class="w-5 h-5 text-gray-400" alt="phone icon">
+                    </div>
+                    <input type="number" placeholder="ex:078....." class="w-full pl-10 px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required formControlName="number"/>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-4 items-center">
+            <div class="flex-1 mt-4">
+                <label  class="text-[#ABB8C4] block mb-4 text-[14px] font-medium leading-[20px]">Date of birth</label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <img src='/calendar.svg' class="w-5 h-5 text-gray-400" alt="phone icon">
+                    </div>
+                    <input type="date" placeholder="Select you birth date" class="w-full pl-10 px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none " required  formControlName="dob" />
+                </div>
+            </div>
+            
+             <div class="flex-1 mt-4 ">
+                
+                <label  class="text-[#ABB8C4] block mb-6 text-[14px] font-medium leading-[20px]">Insurance policy number</label>
+                <div class="relative">
+                    <mat-radio-group aria-label="Select an option" class="space-x-28" formControlName="gender">
+                        <mat-radio-button value="male" class="border-dashed border-2 p-4 w-[117px] border-[#363A3D] h-[48px] text-[#CDCECF] rounded-[5px] font-[500] text-[16px] leading-[24px]">Male</mat-radio-button>
+                        <mat-radio-button value="female" class="border-dashed border-2 p-4 w-[117px] border-[#363A3D] h-[48px] text-[#CDCECF] rounded-[5px] font-[500] text-[16px] leading-[24px]">Female</mat-radio-button>
+                        <mat-radio-button value="other" class="border-dashed border-2 p-4 w-[117px] border-[#363A3D] h-[48px] text-[#CDCECF] rounded-[5px] font-[500] text-[16px] leading-[24px]">Other</mat-radio-button>
+                      </mat-radio-group>
+                </div>
+             </div>
+            
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-4">
+            <div class="flex-1 mt-4">
+                <label  class="text-[#ABB8C4] block mb-2 text-[14px] font-medium leading-[20px]">Address</label> 
+                    <input type="text" placeholder="ex: 14 street, New York, NY - 5101" class="w-full px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required formControlName="address" />
+            </div>
+        
+            <div class="flex-1 mt-4">
+                <label  class="text-[#ABB8C4] block mb-2 text-[14px] font-medium leading-[20px]">Occupation</label>
+                  <input type="text" placeholder="Software Engineer" class="w-full  px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required formControlName="occupation" />
+            </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-4">
+            <div class="flex-1 mt-4">
+                <label  class="text-[#ABB8C4] block mb-2 text-[14px] font-medium leading-[20px]">Emergency contact name</label> 
+                    <input type="text" placeholder="Guardian’s name" class="w-full px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required formControlName="emergencyContactName" />
+            </div>
+        
+            <div class="flex-1 mt-4">
+                <label  class="text-[#ABB8C4] block mb-2 text-[14px] font-medium leading-[20px]">Emergency Phone number</label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <img src='/Phone.svg' class="w-5 h-5 text-gray-400" alt="phone icon">
+                    </div>
+                    <input type="number" placeholder="ex: 078......" class="w-full pl-10 px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required formControlName="emergencyPhoneNumber" />
+                </div>
+            </div>
+        </div>
+
+    <div class="mt-10">
+       <h1 class="text-white text-[30px] font-[700] leading-[36px]">Medical Information</h1>
+    </div>
+    <div class="mt-4">
+        <label for="fullname" class="text-[#ABB8C4] block mb-2 text-[14px] font-medium leading-[20px]">Primary care physician</label>
+        <div class="relative">
+            <select   class="w-full  px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" formControlName="doctor" >
+                <option value="" disabled selected>Select a doctor</option>
+                <option *ngFor="let doctor of doctors" [value]="doctor.key" >
+                  {{ doctor.label }}
+                </option>
+              </select>
+        </div>
+    </div>
+    <div class="flex flex-col lg:flex-row gap-4">
+        <div class="flex-1 mt-4">
+            <label  class="text-[#ABB8C4] block mb-2 text-[14px] font-medium leading-[20px]">Insurance provider</label> 
+                <input type="text" placeholder="ex: BlueCross" class="w-full px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required formControlName="insuranceProvider" />
+        </div>
+    
+        <div class="flex-1 mt-4">
+            <label  class="text-[#ABB8C4] block mb-2 text-[14px] font-medium leading-[20px]">Insurance policy number</label>
+              <input type="text" placeholder="ex: ABC1234567" class="w-full  px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required formControlName="insurancePolicyNumber" />
+        </div>
+    </div>
+    <div class="flex flex-col lg:flex-row gap-4">
+        <div class="flex-1 mt-4">
+            <label  class="text-[#ABB8C4] block mb-2 text-[14px]  font-medium leading-[20px]">Allergies (if any)</label> 
+                <input type="text" placeholder="ex: Peanuts, Penicillin, Pollen" class="w-full h-[96px] px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required formControlName="allergies" />
+        </div>
+    
+        <div class="flex-1 mt-4">
+            <label  class="text-[#ABB8C4] block mb-2 text-[14px]  font-medium leading-[20px]">Current medications</label>
+              <input type="text" placeholder="ex: Ibuprofen 200mg, Levothyroxine 50mcg" class="w-full h-[96px]  px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required  formControlName="currentMedications" />
+        </div>
+    </div>
+    <div class="flex flex-col lg:flex-row gap-4">
+        <div class="flex-1 mt-4">
+            <label  class="text-[#ABB8C4] block mb-2 text-[14px]  font-medium leading-[20px]">Family medical history (if relevant)</label> 
+                <input type="text" placeholder="ex: Mother had breast cancer" class="w-full h-[96px] px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required  formControlName="medicalHistory" />
+        </div>
+    
+        <div class="flex-1 mt-4">
+            <label  class="text-[#ABB8C4] block mb-2 text-[14px]  font-medium leading-[20px]">Past medical history</label>
+              <input type="text" placeholder="ex: Asthma diagnosis in childhood" class="w-full h-[96px]  px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required formControlName="pastMedical" />
+        </div>
+    </div>
+    <div class="mt-10">
+       <h1 class="text-white text-[30px] font-[700] leading-[36px]">Identification and Verfication</h1>
+    </div>
+    <div class="mt-4">
+        <label for="fullname" class="text-[#ABB8C4] block mb-2 text-[14px] font-medium leading-[20px]">Primary care physician</label>
+        <div class="relative">
+            <select   class="w-full  px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" formControlName="birthCertificate" >
+                <option value="" disabled selected>Birth Certificate</option>
+                <option *ngFor="let identification of identifications" [value]="identification.key" >
+                  {{ identification.label }}
+                </option>
+              </select>
+        </div>
+    </div>
+    <div class="flex-1 mt-4">
+          <label  class="text-[#ABB8C4] block mb-2 text-[14px]  font-medium leading-[20px]">Identification Number</label>
+          <input type="number" placeholder="ex 1234567" class="w-full px-5 py-3 rounded-lg text-white bg-[#1A1D21] border-[#363A3D] border-[1px] focus:outline-none" required />
+    </div>
+    
+    <!-- <div class="w-full  p-6 mx-auto bg-[#1A1D21] text-gray-200 rounded-lg border-2 border-dashed border-gray-600 mt-4">
+        <div class="flex flex-col items-center justify-center h-40">
+          <div class="flex justify-center mb-4 text-green-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+            </svg>
+          </div>
+          <p class="mb-2 text-sm">Scanned Copy of Identification Document</p>
+          <label class="w-full text-center cursor-pointer text-green-500 hover:underline">
+            <input type="file" class="hidden" (change)="onFileSelected($event)" accept="image/*" />
+            Click to upload or drag and drop
+          </label>
+          <p class="text-sm text-gray-400">SVG, PNG, JPG or GIF (max. 800x400px)</p>
+        </div>
+      </div> -->
+        <div class="mt-10">
+            <button type="submit" class="w-full px-10 py-3 text-white font-medium tracking-widest text-center rounded-lg bg-[#2b8f6a] hover:bg-[#24AE7C] focus:outline-none">Submit and continue</button> 
+        </div>
+    </form>
+   </div>
+</div>
+</div>
