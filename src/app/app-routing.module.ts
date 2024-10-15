@@ -5,13 +5,14 @@ import { PatientFormComponent } from './components/patient-form/patient-form.com
 import { DashbordComponent } from './components/dashbord/dashbord.component';
 import { AppointmentFormComponent } from './components/appointment-form/appointment-form.component';
 import { SuccessPageComponent } from './components/success-page/success-page.component';
+import { FormFillGuard } from './guards/form-fill.guard';
 
 const routes: Routes = [
   {path: '', component:OnboardingComponent},
-  {path:'patient-form', component:PatientFormComponent},
+  {path:'patient-form', component:PatientFormComponent,canActivate: [FormFillGuard]},
   {path:'dashboard', component:DashbordComponent},
-  {path:'appointment', component:AppointmentFormComponent},
-  {path:'success', component:SuccessPageComponent}
+  {path:'appointment', component:AppointmentFormComponent,canActivate: [FormFillGuard]},
+  {path:'success', component:SuccessPageComponent,canActivate: [FormFillGuard]}
 
 ];
 

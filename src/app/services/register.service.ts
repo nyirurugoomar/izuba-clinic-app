@@ -1,17 +1,23 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RegisterService {
+  private formFilled: boolean = false;
 
-  constructor(private _http:HttpClient) {}
+  constructor(private http: HttpClient) {}
 
+  registerPatient(formData: any) {
+    return this.http.post('http://localhost:3000/register', formData);
+  }
 
+  setFormFilled(status: boolean) {
+    this.formFilled = status;
+  }
 
-  registerPatient(data: any): Observable<any> {
-    return this._http.post('http://localhost:3000/register', data);
+  isFormFilled(): boolean {
+    return this.formFilled;
   }
 }

@@ -89,6 +89,24 @@
       "fullname": "test",
       "email": "test@gmail.com",
       "phone": 3948484444
+    },
+    {
+      "id": "7dad",
+      "fullname": "test123",
+      "email": "test@gmail.com",
+      "phone": 4759247690
+    },
+    {
+      "id": "84d4",
+      "fullname": "test",
+      "email": "test@gmail.com",
+      "phone": 7474846478
+    },
+    {
+      "id": "f0aa",
+      "fullname": "test",
+      "email": "test@gmail.com",
+      "phone": 4955858448
     }
   ],
   "patientInfo": [
@@ -192,6 +210,27 @@
       "medicalHistory": "",
       "pastMedical": "",
       "birthCertificate": ""
+    },
+    {
+      "id": "1383",
+      "fullname": "adam",
+      "email": "adam@gmail.com",
+      "number": 4885885885,
+      "dob": "2024-10-24",
+      "gender": "male",
+      "address": "kigali",
+      "occupation": "dentist",
+      "emergencyContactName": "mama",
+      "emergencyPhoneNumber": 9485894039,
+      "doctor": "Dr. Emily Carter",
+      "insuranceProvider": "RSSB",
+      "insurancePolicyNumber": "4308940609495",
+      "allergies": "POLLEN",
+      "currentMedications": "ibuprofen",
+      "medicalHistory": "test",
+      "pastMedical": "test",
+      "birthCertificate": "driversLicense",
+      "identificationNumber": 59382965823906
     }
   ],
   "appointmentInfo": [

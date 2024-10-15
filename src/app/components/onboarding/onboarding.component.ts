@@ -29,6 +29,7 @@ register(){
       next:(val:any)=>{
         alert("Patient registration")
         this.registerForm.reset();
+        this.registerService.setFormFilled(true);
         this._router.navigate(['/patient-form']);
 
       }

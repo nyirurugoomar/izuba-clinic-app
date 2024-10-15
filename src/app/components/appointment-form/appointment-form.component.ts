@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AppointmentService } from '../../services/appointment.service';
 import { Router } from '@angular/router';
 
@@ -23,9 +23,9 @@ export class AppointmentFormComponent {
               private _router:Router,
     ){
       this.appointmentForm = this._fb.group({
-        doctors: '',
-        reasonAppointment:'',
-        additionComment:'',
+        doctors: ['',[Validators.required]],
+        reasonAppointment:['',[Validators.required]],
+        additionComment:[''],
         date:''
       })
     }
