@@ -1,14 +1,14 @@
 {
   "posts": [
     {
-      "id": 1,
+      "id": "1",
       "title": "json-server",
       "author": "typicode"
     }
   ],
   "comments": [
     {
-      "id": 1,
+      "id": "1",
       "body": "some comment",
       "postId": 1
     }
@@ -17,7 +17,9 @@
     "name": "typicode"
   },
   "register": [
-    {},
+    {
+      "id": "9ee4"
+    },
     {
       "id": "b828",
       "fullname": "Nyirurugo Omar",
@@ -107,10 +109,60 @@
       "fullname": "test",
       "email": "test@gmail.com",
       "phone": 4955858448
+    },
+    {
+      "id": "ac6b",
+      "fullname": "test12",
+      "email": "test@gmail.com",
+      "phone": 8530694705
+    },
+    {
+      "id": "b236",
+      "fullname": "test",
+      "email": "test@gmail.com",
+      "phone": 4958589695
+    },
+    {
+      "id": "cf16",
+      "fullname": "kwizera",
+      "email": "kwizera@gmail.com",
+      "phone": 4368349089
+    },
+    {
+      "id": "d243",
+      "fullname": "eric",
+      "email": "eric@gmail.com",
+      "phone": 4860943760
+    },
+    {
+      "id": "9aa2",
+      "fullname": "test124",
+      "email": "test124@gmail.com",
+      "phone": 9436934869
+    },
+    {
+      "id": "ffd5",
+      "fullname": "yuuuu",
+      "email": "yuuuu@gmail.com",
+      "phone": 3489028906
+    },
+    {
+      "id": "1f99",
+      "fullname": "men",
+      "email": "men@gmail.com",
+      "phone": 2357738497
+    },
+    {
+      "id": "d702",
+      "fullname": "test",
+      "email": "test@gmail.com",
+      "phone": 9473697369
     }
   ],
   "patientInfo": [
-    {},
+    {
+      "id": "9ffd"
+    },
     {
       "id": "545f",
       "fullname": "test",
@@ -231,10 +283,33 @@
       "pastMedical": "test",
       "birthCertificate": "driversLicense",
       "identificationNumber": 59382965823906
+    },
+    {
+      "id": "7e00",
+      "fullname": "test",
+      "email": "test@gmail",
+      "number": 5998678505,
+      "dob": "2024-10-17",
+      "gender": "male",
+      "address": "kigalli",
+      "occupation": "test",
+      "emergencyContactName": "test",
+      "emergencyPhoneNumber": 3085092375,
+      "doctor": "Dr. Sarah Thompson",
+      "insuranceProvider": "test",
+      "insurancePolicyNumber": "44504238584",
+      "allergies": "test",
+      "currentMedications": "tewst",
+      "medicalHistory": "test",
+      "pastMedical": "test",
+      "birthCertificate": "driversLicense",
+      "identificationNumber": 43569034859
     }
   ],
   "appointmentInfo": [
-    {},
+    {
+      "id": "ea31"
+    },
     {
       "id": "dc5e",
       "doctors": "Dr. James Whitman",
@@ -276,6 +351,13 @@
       "reasonAppointment": "",
       "additionComment": "",
       "date": ""
+    },
+    {
+      "id": "cd1c",
+      "doctors": "Dr. Sarah Thompson",
+      "reasonAppointment": "394854",
+      "additionComment": "324593846",
+      "date": "2024-10-09"
     }
   ]
 }
