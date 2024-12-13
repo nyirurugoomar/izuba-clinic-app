@@ -157,6 +157,24 @@
       "fullname": "test",
       "email": "test@gmail.com",
       "phone": 9473697369
+    },
+    {
+      "id": "ad1c",
+      "fullname": "manzi jfjfjf",
+      "email": "manzi@gmail.com",
+      "phone": 4860486886
+    },
+    {
+      "id": "65ce",
+      "fullname": "monster",
+      "email": "monster@gmail.com",
+      "phone": 4957438975
+    },
+    {
+      "id": "f838",
+      "fullname": "man",
+      "email": "man@gmail.com",
+      "phone": 7844181273
     }
   ],
   "patientInfo": [
@@ -304,6 +322,27 @@
       "pastMedical": "test",
       "birthCertificate": "driversLicense",
       "identificationNumber": 43569034859
+    },
+    {
+      "id": "3571",
+      "fullname": "man",
+      "email": "man@gmail.com",
+      "number": 7844181273,
+      "dob": "2024-12-19",
+      "gender": "female",
+      "address": "kigali",
+      "occupation": "developer",
+      "emergencyContactName": "mama",
+      "emergencyPhoneNumber": 7844181273,
+      "doctor": "Dr. Emily Carter",
+      "insuranceProvider": "RSSB",
+      "insurancePolicyNumber": "90437690437",
+      "allergies": "SDKHGKLAHDS;LAKGLSA",
+      "currentMedications": "FDSLJAGLJDSLGJIL;SAG",
+      "medicalHistory": "DJSGLKJSALJGLKJEQLAIGJ",
+      "pastMedical": "SLEGAKJLKSJAGK;LALSK",
+      "birthCertificate": "passport",
+      "identificationNumber": 2397465892376
     }
   ],
   "appointmentInfo": [

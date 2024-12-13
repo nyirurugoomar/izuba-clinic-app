@@ -67,14 +67,17 @@
                 </div>
             </div>
             
-             <div class="flex-1 mt-4 ">
-                
+             <div class="flex-1 mt-4 "> 
                 <label  class="text-[#ABB8C4] block mb-6 text-[14px] font-medium leading-[20px]">Gender</label>
                 <div class="relative">
                     <mat-radio-group aria-label="Select an option" class="space-x-28" formControlName="gender">
-                        <mat-radio-button value="male" class="border-dashed border-2 p-4 w-[117px] border-[#363A3D] h-[48px] text-[#CDCECF] rounded-[5px] font-[500] text-[16px] leading-[24px]">Male</mat-radio-button>
-                        <mat-radio-button value="female" class="border-dashed border-2 p-4 w-[117px] border-[#363A3D] h-[48px] text-[#CDCECF] rounded-[5px] font-[500] text-[16px] leading-[24px]">Female</mat-radio-button>
-                        <mat-radio-button value="other" class="border-dashed border-2 p-4 w-[117px] border-[#363A3D] h-[48px] text-[#CDCECF] rounded-[5px] font-[500] text-[16px] leading-[24px]">Other</mat-radio-button>
+                        <mat-radio-button 
+                        value="male" 
+                        
+                        class="border-dashed border-2 p-4 w-[117px] border-[#363A3D] h-[48px] text-white  rounded-[5px] font-[500] text-[16px] leading-[24px]">Male
+                    </mat-radio-button>
+                        <mat-radio-button value="female" class="border-dashed border-2 p-4 w-[117px] border-[#363A3D] h-[48px] text-white  rounded-[5px] font-[500] text-[16px] leading-[24px]">Female</mat-radio-button>
+                        <mat-radio-button value="other" class="border-dashed border-2 p-4 w-[117px] border-[#363A3D] h-[48px] text-white  rounded-[5px] font-[500] text-[16px] leading-[24px]">Other</mat-radio-button>
                       </mat-radio-group>
                 </div>
                 <div *ngIf="patientForm.get('gender')?.touched && patientForm.get('gender')?.invalid" class="text-red-500 text-sm mt-1">

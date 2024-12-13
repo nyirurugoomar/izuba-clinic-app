@@ -11,7 +11,7 @@ export class AppointmentService {
 
 
   appointmentAdd(data:any) {
-    return this._http.post('http://localhost:3000/appointmentInfo', data);
+    return this._http.post('http://localhost:3004/appointment-info', data);
   }
   getAppointment():Observable<any> {
     return this._http.get('http://localhost:3000/appointmentInfo');

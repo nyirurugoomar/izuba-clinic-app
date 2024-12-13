@@ -30,7 +30,7 @@ register(){
         alert("Patient registration")
         this.registerForm.reset();
         this.registerService.setFormFilled(true);
-        this._router.navigate(['/patient-form']);
+        this._router.navigate(['patient-form']);
 
       }
     })

@@ -8,6 +8,7 @@ import { SuccessPageComponent } from './components/success-page/success-page.com
 import { FormFillGuard } from './guards/form-fill.guard';
 
 const routes: Routes = [
+  
   {path: '', component:OnboardingComponent},
   {path:'patient-form', component:PatientFormComponent,canActivate: [FormFillGuard]},
   {path:'dashboard', component:DashbordComponent},

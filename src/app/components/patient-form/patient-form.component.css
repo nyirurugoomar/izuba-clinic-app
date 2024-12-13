@@ -1,0 +1,24 @@
+.mat-accent.mat-mdc-radio-button {
+    --mdc-radio-selected-focus-icon-color: white;
+    --mdc-radio-selected-hover-icon-color: white;
+    --mdc-radio-selected-icon-color: white;
+    --mdc-radio-selected-pressed-icon-color: white;
+    --mat-radio-checked-ripple-color: white;
+}
+
+.mat-mdc-radio-button .mat-internal-form-field {
+    color: #ffffff;
+    font-family: var(--mat-radio-label-text-font, var(--mat-app-body-medium-font));
+    line-height: var(--mat-radio-label-text-line-height, var(--mat-app-body-medium-line-height));
+    font-size: var(--mat-radio-label-text-size, var(--mat-app-body-medium-size));
+    letter-spacing: var(--mat-radio-label-text-tracking, var(--mat-app-body-medium-tracking));
+    font-weight: var(--mat-radio-label-text-weight, var(--mat-app-body-medium-weight));
+}
+
+.mat-radio-button{
+    color: white;
+}
+
+.mat-radio-button .mat-icon-button {
+    color: white;
+}

@@ -11,6 +11,6 @@ export class PatientService {
 
 
   patientInfo(data:any):Observable<any>{
-    return this._http.post('http://localhost:3000/patientInfo', data);
+    return this._http.post('http://localhost:3004/patient-info', data);
   }
 }

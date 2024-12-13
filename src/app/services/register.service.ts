@@ -10,7 +10,7 @@ export class RegisterService {
   constructor(private http: HttpClient) {}
 
   registerPatient(formData: any) {
-    return this.http.post('http://localhost:3000/register', formData);
+    return this.http.post('http://localhost:3004/register', formData);
   }
 
   setFormFilled(status: boolean) {
